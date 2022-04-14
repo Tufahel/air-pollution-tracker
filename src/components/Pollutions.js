@@ -9,7 +9,7 @@ const Pollutions = () => {
   // console.log(pollutions.coord);
   useEffect(() => {
     dispatch(getPollutionData());
-  }, [0]);
+  }, []);
 
   return (
     <div>
@@ -23,9 +23,9 @@ const Pollutions = () => {
         id={pollutions.id}
         lat={pollutions.lat}
         lng={pollutions.lng}
-        co={pollutions.components.co}
-        no={pollutions.components.no}
-        no2={pollutions.components.no2}
+        co={pollutions.co}
+        no={pollutions.no}
+        no2={pollutions.no2}
       />
     </div>
   );

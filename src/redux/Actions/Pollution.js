@@ -14,11 +14,9 @@ export const getPollutionData = () => async (dispatch) => {
     payload: {
       lat: pollutions.coord.lat,
       lng: pollutions.coord.lon,
-      components: {
-        co: pollutions.list[0].components.co,
-        no: pollutions.list[0].components.no,
-        no2: pollutions.list[0].components.no2,
-      },
+      co: pollutions.list[0].components.co,
+      no: pollutions.list[0].components.no,
+      no2: pollutions.list[0].components.no2,
       id: pollutions.list[0].main.aqi,
     },
   });

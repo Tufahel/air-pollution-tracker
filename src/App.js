@@ -6,7 +6,7 @@ import Pollutions from './components/Pollutions';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <BrowserRouter>
         <Header />
         <Routes>

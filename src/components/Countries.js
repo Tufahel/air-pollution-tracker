@@ -24,6 +24,9 @@ const Countries = () => {
             key={country.code}
             id={country.code}
             name={country.name.common}
+            lat={country.latlng[0]}
+            lng={country.latlng[1]}
+            population={country.population}
             region={country.region}
           />
         ))

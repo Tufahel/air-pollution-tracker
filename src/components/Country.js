@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Country = (props) => {
   const {
-    id, name, region,
+    id, name, region, lat, lng, population,
   } = props;
   return (
     <div key={id} className="border">
@@ -16,6 +16,17 @@ const Country = (props) => {
         {name}
       </p>
       <p>
+        lat:
+        {lat}
+
+        lng:
+        {lng}
+      </p>
+      <p>
+        population:
+        {population}
+      </p>
+      <p>
         region:
         {region}
       </p>
@@ -26,6 +37,9 @@ Country.propTypes = {
   region: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
+  lat: PropTypes.number.isRequired,
+  lng: PropTypes.number.isRequired,
+  population: PropTypes.number.isRequired,
 };
 
 export default Country;

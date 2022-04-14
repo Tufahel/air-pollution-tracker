@@ -4,7 +4,7 @@ export const fetchCountryData = async () => {
   return res.json();
 };
 
-const url = 'http://api.openweathermap.org/data/2.5/air_pollution?';
+const url = 'https://api.openweathermap.org/data/2.5/air_pollution?';
 const id = '9143e5c1d67ba3d103ffdcc19c9af51e';
 
 export const fetchPollutionData = async () => {

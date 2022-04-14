@@ -7,8 +7,8 @@ export const addPollution = (payload) => ({
   payload,
 });
 
-export const getPollutionData = () => async (dispatch) => {
-  const pollutions = await fetchPollutionData();
+export const getPollutionData = (lat1, lng1) => async (dispatch) => {
+  const pollutions = await fetchPollutionData(lat1, lng1);
   dispatch({
     type: ADD_POLLUTION,
     payload: {

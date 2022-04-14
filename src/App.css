@@ -1,3 +1,14 @@
 .app {
   text-align: center;
 }
+
+.link:link {
+  text-decoration: none;
+  color: rgb(32 32 246);
+}
+
+.active {
+  color: blue;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}

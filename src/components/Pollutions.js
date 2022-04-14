@@ -7,8 +7,8 @@ const Pollutions = () => {
   const pollutions = useSelector((state) => state.pollutionReducer);
   const dispatch = useDispatch();
   // console.log(pollutions.coord);
-  useEffect(() => {
-    dispatch(getPollutionData());
+  useEffect((lat, lng) => {
+    dispatch(getPollutionData(lat, lng));
   }, []);
 
   return (

@@ -2,7 +2,7 @@ import React from 'react';
 import Region from './Region';
 
 const Regions = () => {
-  const regoinList = [
+  const regionList = [
     { region: 'Asia', country: 50 },
     { region: 'Americas', country: 56 },
     { region: 'Oceania', country: 27 },
@@ -13,7 +13,7 @@ const Regions = () => {
   return (
     <div>
       {
-            regoinList.map((element) => (
+            regionList.map((element) => (
               <Region
                 key={element.region}
                 region={element.region}

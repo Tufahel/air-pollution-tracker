@@ -6,7 +6,7 @@ import { getCountries } from '../redux/Actions/Country';
 // import Pollutions from './Pollutions';
 
 const Region = (props) => {
-  const { region } = props;
+  const { region, regionCountry } = props;
   const dispatch = useDispatch();
   return (
     <div className="border">
@@ -24,11 +24,16 @@ const Region = (props) => {
         region:
         {region}
       </p>
+      <p>
+        countries:
+        {regionCountry}
+      </p>
     </div>
   );
 };
 Region.propTypes = {
   region: PropTypes.string.isRequired,
+  regionCountry: PropTypes.number.isRequired,
 };
 
 export default Region;

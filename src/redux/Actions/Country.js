@@ -17,6 +17,7 @@ export const getCountries = (reg) => async (dispatch) => {
       latlng: country.latlng,
       population: country.population,
       code: country.cca2,
+      flag: country.flags.png,
     })),
   });
 };

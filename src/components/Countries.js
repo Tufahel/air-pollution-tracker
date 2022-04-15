@@ -4,15 +4,13 @@ import Country from './Country';
 
 const Countries = () => {
   const countries = useSelector((state) => state.countryReducer);
-
+  if (!countries.length) {
+    return (
+      <p>loading</p>
+    );
+  }
   return (
     <div>
-      <Country
-        key="1"
-        id="1"
-        name="name"
-        region="region"
-      />
       {
         countries.map((country) => (
           <Country
@@ -23,6 +21,7 @@ const Countries = () => {
             lng={country.latlng[1]}
             population={country.population}
             region={country.region}
+            flag={country.flag}
           />
         ))
       }

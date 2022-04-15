@@ -4,16 +4,19 @@ import { NavLink } from 'react-router-dom';
 
 const Pollution = (props) => {
   const {
-    id, lat, lng, co, no, no2,
+    id, lat, lng, co, no, no2, flag,
   } = props;
   return (
     <div className="border">
+      <div className="mt-2">
+        <img src={flag} alt="img" />
+      </div>
       <button
         key={id}
         type="button"
-        className="btn btn-primary"
+        className="btn btn-primary mt-2"
       >
-        <NavLink to="/" className="link m-2 text-light">Back</NavLink>
+        <NavLink to="/countries" className="link m-2 text-light">Back</NavLink>
       </button>
       <p>
         id:
@@ -52,5 +55,6 @@ Pollution.propTypes = {
   co: PropTypes.string.isRequired,
   no: PropTypes.string.isRequired,
   no2: PropTypes.string.isRequired,
+  flag: PropTypes.string.isRequired,
 };
 export default Pollution;

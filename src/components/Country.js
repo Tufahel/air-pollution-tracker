@@ -7,17 +7,21 @@ import { getPollutionData } from '../redux/Actions/Pollution';
 
 const Country = (props) => {
   const {
-    id, name, region, lat, lng, population,
+    id, name, region, lat, lng, population, flag,
   } = props;
   const dispatch = useDispatch();
+
   return (
-    <div className="border">
+    <div className="border background-primary">
+      <div className="mt-2">
+        <img src={flag} alt="img" />
+      </div>
       <button
         key={id}
         type="button"
-        className="btn btn-primary"
+        className="btn btn-primary mt-2"
         onClick={() => {
-          dispatch(getPollutionData(parseInt(lat, 10), parseInt(lng, 10)));
+          dispatch(getPollutionData(parseInt(lat, 10), parseInt(lng, 10), flag));
           console.log('lt lng: ', parseInt(lat, 10), parseInt(lng, 10));
         }}
       >
@@ -46,6 +50,13 @@ const Country = (props) => {
         region:
         {region}
       </p>
+      <button
+        key={id}
+        type="button"
+        className="btn btn-primary mt-2"
+      >
+        <NavLink to="/" className="link m-2 text-light">Back</NavLink>
+      </button>
     </div>
   );
 };
@@ -53,6 +64,7 @@ Country.propTypes = {
   region: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
+  flag: PropTypes.string.isRequired,
   lat: PropTypes.number.isRequired,
   lng: PropTypes.number.isRequired,
   population: PropTypes.number.isRequired,

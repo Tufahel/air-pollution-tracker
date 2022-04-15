@@ -7,13 +7,13 @@ export const addCountries = (payload) => ({
   payload,
 });
 
-export const getCountries = () => async (dispatch) => {
-  const countries = await fetchCountryData();
+export const getCountries = (reg) => async (dispatch) => {
+  const countries = await fetchCountryData(reg);
   dispatch({
     type: ADD_COUNTRY,
     payload: countries.map((country) => ({
       name: country.name,
-      region: country.region,
+      region: reg,
       latlng: country.latlng,
       population: country.population,
       code: country.cca2,

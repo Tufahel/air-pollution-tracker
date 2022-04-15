@@ -1,7 +1,8 @@
-export const fetchCountryData = async () => {
-  const res = await fetch('https://restcountries.com/v3.1/all');
-  // console.log('cntry: ', res.json());
-  return res.json();
+export const fetchCountryData = async (reg) => {
+  const res = await fetch('https://restcountries.com/v3.1/all')
+    .then((data) => data.json());
+  const result = res.filter((country) => country.region === reg);
+  return result;
 };
 
 const url = 'https://api.openweathermap.org/data/2.5/air_pollution?';

@@ -13,7 +13,13 @@ const Header = () => (
           {' '}
           <li>
             {' '}
-            <NavLink to="/" activeclassname="active-link" className="link m-2">Country</NavLink>
+            <NavLink to="/" activeclassname="active-link" className="link m-2">Region</NavLink>
+            {' '}
+          </li>
+          {' '}
+          <li>
+            {' '}
+            <NavLink to="/countries" activeclassname="active-link" className="link m-2">Country</NavLink>
             {' '}
           </li>
           {' '}

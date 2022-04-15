@@ -33,10 +33,10 @@ const Country = (props) => {
       </p>
       <p>
         lat:
-        {lat}
+        {parseInt(lat, 10)}
 
         lng:
-        {lng}
+        {parseInt(lng, 10)}
       </p>
       <p>
         population:

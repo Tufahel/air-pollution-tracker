@@ -1,15 +1,10 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { getCountries } from '../redux/Actions/Country';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import Country from './Country';
 
 const Countries = () => {
   const countries = useSelector((state) => state.countryReducer);
-  const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getCountries());
-  }, []);
   return (
     <div>
       <Country

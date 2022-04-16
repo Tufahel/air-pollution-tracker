@@ -1,60 +1,54 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
 
 const Pollution = (props) => {
   const {
-    id, lat, lng, co, no, no2, flag,
+    co, no, no2, flag, name,
   } = props;
   return (
-    <div className="border">
-      <div className="mt-2">
-        <img src={flag} alt="img" />
+    <div>
+      <h3 className="text-white m-2">{name}</h3>
+      <div className="m-2">
+        <img src={flag} alt="flag" className="w-25" />
       </div>
-      <button
-        key={id}
-        type="button"
-        className="btn btn-primary mt-2"
-      >
-        <NavLink to="/countries" className="link m-2 text-light">Back</NavLink>
-      </button>
-      <p>
-        id:
-        {' '}
-        {id}
+      <p className="m-2 text-warning">
+        Air pollution ( μg/m3 ) stats - 2022:
       </p>
-      <p>
-        lat:
-        {' '}
-        {lat}
-        , lng:
-        {lng}
-      </p>
-      <p>
-        components:
-        {' '}
-        co:
-        {' '}
-        {co}
-        {' '}
-        no:
-        {' '}
-        {no}
-        {' '}
-        no2:
-        {' '}
-        {no2}
-      </p>
+      <table className="table d-flex justify-content-center align-items-center flex-column">
+        <thead>
+          <tr className="table-light">
+            <th scope="col">gas</th>
+            <th scope="col">μg/m3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr className="table-secondary">
+            <th scope="row">CO</th>
+            <td>{co}</td>
+          </tr>
+          <tr className="table-danger">
+            <th scope="row">NO</th>
+            <td>{no}</td>
+          </tr>
+          <tr className="table-warning">
+            <th scope="row">NO2</th>
+            <td>{no2}</td>
+          </tr>
+          <tr className="table-info">
+            <th scope="row">NO2</th>
+            <td>{no2}</td>
+          </tr>
+        </tbody>
+      </table>
+
     </div>
   );
 };
 Pollution.propTypes = {
-  id: PropTypes.string.isRequired,
-  lat: PropTypes.number.isRequired,
-  lng: PropTypes.number.isRequired,
   co: PropTypes.string.isRequired,
   no: PropTypes.string.isRequired,
   no2: PropTypes.string.isRequired,
   flag: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 };
 export default Pollution;

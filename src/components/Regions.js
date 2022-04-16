@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './Header';
 import Region from './Region';
 
 const Regions = () => {
@@ -12,7 +13,9 @@ const Regions = () => {
   // const regionCountry = ['50', '56', '27', '5', '53', '59'];
   return (
     <div>
-      {
+      <Header id="/" />
+      <div className="row">
+        {
             regionList.map((element) => (
               <Region
                 key={element.region}
@@ -21,6 +24,7 @@ const Regions = () => {
               />
             ))
         }
+      </div>
     </div>
   );
 };

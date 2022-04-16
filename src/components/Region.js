@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { getCountries } from '../redux/Actions/Country';
 import Africa from '../assets/Africa.png';
 import Americas from '../assets/Americas.png';
@@ -22,28 +24,35 @@ const Region = (props) => {
   else if (region === 'Americas') region1 = Americas;
   else region1 = Asia;
   return (
-    <div className="border">
-      <button
-        key={region}
-        type="button"
-        className="btn btn-primary mt-2"
-        onClick={() => {
-          dispatch(getCountries(region));
-        }}
-      >
-        <NavLink to="/countries" className="link m-2 text-light">Details</NavLink>
-      </button>
-      <div>
-        <img src={region1} alt="" className="w-25 m-2" />
+    <div className="col-6">
+      <div className="region">
+        <button
+          key={region}
+          type="button"
+          className="btn mt-2"
+          onClick={() => {
+            dispatch(getCountries(region));
+          }}
+          to="/countries"
+        >
+          <NavLink to="/countries" className="link m-2 text-light">
+            <div className="d-flex justify-content-center">
+              <img src={region1} alt="" className="m-2" />
+              <div className="mt-4">
+                <p className="font-weight-bold">
+                  {region}
+                </p>
+                <p>
+                  {regionCountry}
+                  {' '}
+                  Countries
+                </p>
+              </div>
+              <FontAwesomeIcon icon={faCircleArrowRight} className="icon" />
+            </div>
+          </NavLink>
+        </button>
       </div>
-      <p>
-        region:
-        {region}
-      </p>
-      <p>
-        countries:
-        {regionCountry}
-      </p>
     </div>
   );
 };

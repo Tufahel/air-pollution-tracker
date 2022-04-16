@@ -6,15 +6,15 @@ const Pollution = (props) => {
     co, no, no2, flag, name,
   } = props;
   return (
-    <div>
+    <div className="pollution m-5">
       <h3 className="text-white m-2">{name}</h3>
       <div className="m-2">
-        <img src={flag} alt="flag" className="w-25" />
+        <img src={flag} alt="flag" className="w-25 img" />
       </div>
       <p className="m-2 text-warning">
         Air pollution ( μg/m3 ) stats - 2022:
       </p>
-      <table className="table d-flex justify-content-center align-items-center flex-column">
+      <table className="table">
         <thead>
           <tr className="table-light">
             <th scope="col">gas</th>

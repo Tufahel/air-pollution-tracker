@@ -16,15 +16,20 @@ body {
   cursor:pointer;
 } */
 
-img {
+.img {
   width: 40%;
   transition: width 2s;
 }
 
-img:hover {
+.img:hover {
   width: 60%;
 }
 
 .icon {
   height: 5vh;
+}
+
+.img1 {
+  height: 30vh;
+  width: 30%;
 }

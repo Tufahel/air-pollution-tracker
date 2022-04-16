@@ -24,21 +24,23 @@ const Country = (props) => {
             console.log('lt lng: ', parseInt(lat, 10), parseInt(lng, 10));
           }}
         >
-          <NavLink to="/pollution" className="link m-2 text-light d-flex">
+          <NavLink to="/pollution" className="link d-flex m-2 text-light">
             <div>
-              <img src={flag} alt="flag" className="m-2" />
+              <img src={flag} alt="flag" className="m-2 img" />
+              <div className="">
+                <h5>
+                  {name}
+                </h5>
+                <p>
+                  Population:
+                  {' '}
+                  {population}
+                </p>
+              </div>
             </div>
             <FontAwesomeIcon icon={faCircleArrowRight} className="icon" />
           </NavLink>
         </button>
-        <div className="m-2">
-          <p>
-            {name}
-          </p>
-          <p>
-            {population}
-          </p>
-        </div>
       </div>
     </div>
   );

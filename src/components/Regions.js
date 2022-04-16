@@ -14,7 +14,7 @@ const Regions = () => {
   return (
     <div>
       <Header id="/" />
-      <div className="row">
+      <div className="row m-4">
         {
             regionList.map((element) => (
               <Region

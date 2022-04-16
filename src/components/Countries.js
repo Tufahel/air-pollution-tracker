@@ -14,14 +14,6 @@ import Antarctic from '../assets/Antarctic.png';
 
 const Countries = () => {
   const countries = useSelector((state) => state.countryReducer);
-  let region1 = countries[0].region;
-  if (region1 === 'Africa') region1 = Africa;
-  else if (region1 === 'Asia') region1 = Asia;
-  else if (region1 === 'Europe') region1 = Europe;
-  else if (region1 === 'Oceania') region1 = Oceania;
-  else if (region1 === 'Americas') region1 = Americas;
-  else region1 = Antarctic;
-
   if (!countries.length) {
     return (
       <div className="m-2">
@@ -33,6 +25,13 @@ const Countries = () => {
       </div>
     );
   }
+  let region1 = countries[0].region;
+  if (region1 === 'Africa') region1 = Africa;
+  else if (region1 === 'Asia') region1 = Asia;
+  else if (region1 === 'Europe') region1 = Europe;
+  else if (region1 === 'Oceania') region1 = Oceania;
+  else if (region1 === 'Americas') region1 = Americas;
+  else region1 = Antarctic;
   return (
     <div>
       <Header id="/" />

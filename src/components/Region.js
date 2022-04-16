@@ -25,7 +25,7 @@ const Region = (props) => {
   else if (region === 'Americas') region1 = Americas;
   else region1 = Antarctic;
   return (
-    <div className="col-6">
+    <div className="col-6 border">
       <div className="region">
         <button
           key={region}
@@ -39,17 +39,17 @@ const Region = (props) => {
           <NavLink to="/countries" className="link m-2 text-light">
             <div className="d-flex justify-content-center">
               <img src={region1} alt="" className="m-2 img" />
-              <div className="mt-4">
-                <p className="font-weight-bold">
-                  {region}
-                </p>
-                <p>
-                  {regionCountry}
-                  {' '}
-                  Countries
-                </p>
-              </div>
               <FontAwesomeIcon icon={faCircleArrowRight} className="icon" />
+            </div>
+            <div>
+              <p>
+                {region}
+              </p>
+              <p>
+                {regionCountry}
+                {' '}
+                Countries
+              </p>
             </div>
           </NavLink>
         </button>

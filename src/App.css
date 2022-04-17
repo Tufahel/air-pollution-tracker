@@ -12,24 +12,19 @@ body {
   color: rgb(32 32 246);
 }
 
-/* img:hover {
-  cursor:pointer;
-} */
-
 .img {
-  width: 40%;
-  transition: width 2s;
+  width: 80%;
+  transition: width 1s;
 }
 
 .img:hover {
-  width: 60%;
+  width: 100%;
 }
 
 .icon {
-  height: 5vh;
+  height: 3vh;
 }
 
 .img1 {
-  height: 30vh;
   width: 30%;
 }

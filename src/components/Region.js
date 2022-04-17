@@ -26,33 +26,35 @@ const Region = (props) => {
   else region1 = Antarctic;
   return (
     <div className="col-6 border">
-      <div className="region">
-        <button
-          key={region}
-          type="button"
-          className="btn mt-2"
-          onClick={() => {
-            dispatch(getCountries(region));
-          }}
-          to="/countries"
-        >
-          <NavLink to="/countries" className="link m-2 text-light">
-            <div className="d-flex justify-content-center">
-              <img src={region1} alt="" className="m-2 img" />
+      <div className="region d-flex justify-content-between">
+        <div className="d-flex flex-column">
+          <img src={region1} alt="" className="m-2 img" />
+          <div>
+            <p>
+              {region}
+            </p>
+            <p>
+              {regionCountry}
+              {' '}
+              Countries
+            </p>
+          </div>
+        </div>
+        <div>
+          <button
+            key={region}
+            type="button"
+            className="btn mt-2"
+            onClick={() => {
+              dispatch(getCountries(region));
+            }}
+            to="/countries"
+          >
+            <NavLink to="/countries" className="link m-2 text-light">
               <FontAwesomeIcon icon={faCircleArrowRight} className="icon" />
-            </div>
-            <div>
-              <p>
-                {region}
-              </p>
-              <p>
-                {regionCountry}
-                {' '}
-                Countries
-              </p>
-            </div>
-          </NavLink>
-        </button>
+            </NavLink>
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -1,28 +1,32 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Title-Info
-> This is a template for react based projects with linters, package.json and readme setup.
+> Air pollution Tracker is basically a mobile app application which tracks the data of air of a specific coutry based on their continent.
 
-# GIF/Screenshot
-![]
+# Screenshot
+![](pic1.png)
+![](pic2.png)
+![](pic3.png)
 
 ## Built With
 - React
+- Redux
+- Bootstrap
+- CSS
+- Fontawesome
+- Netlify for live page
 
 ## Live Demo
-For the link to the live demo, [Click here]()
+For the link to the live demo, [Click here](https://voluble-elf-b07508.netlify.app/)
 
 ## Getting Started
 To get a local copy up and running you just need to follow the following steps;
 - Clone this repository with
-git clone `https://github.com/Tufahel/react-template-microverse.git` using your terminal or command line.
+git clone `https://github.com/Tufahel/air-pollution-tracker.git` using your terminal or command line.
 - run code `.` to open it in vscode.
-- run `npm update --save` in terminal.
+- run `npm install` in terminal.
 - run `npm run build`.
 - run `npm start`.
-
-## Note
-- Remember to check the version of react `file: package.json, line: 9`. Though it doesn't change so often so it's just a suggestion.
 
 ## Authors
 
@@ -44,9 +48,9 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- I have followed this [Design Guideline](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
+- Original desing idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
+
 
 ## 📝 License
 

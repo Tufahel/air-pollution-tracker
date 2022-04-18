@@ -18,7 +18,7 @@ body {
 }
 
 .img:hover {
-  width: 100%;
+  width: 90%;
 }
 
 .icon {
@@ -26,5 +26,48 @@ body {
 }
 
 .img1 {
-  width: 30%;
+  width: 50%;
+}
+
+.world-container {
+  position: relative;
+  text-align: center;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.world-map {
+  width: 80%;
+  opacity: 0.3;
+}
+
+@media only screen and (min-width: 769px) {
+  .world-map {
+    width: 50%;
+    opacity: 0.3;
+  }
+
+  .img {
+    width: 60%;
+    transition: width 1s;
+    margin-bottom: 80px;
+  }
+
+  .img:hover {
+    width: 70%;
+  }
+
+  .img1 {
+    width: 25%;
+  }
+
+  .country-details,
+  .region-details {
+    text-align: right !important;
+  }
 }

@@ -12,8 +12,6 @@ import Oceania from '../assets/Oceania.png';
 import Europe from '../assets/Europe.png';
 import Antarctic from '../assets/Antarctic.png';
 
-// import Pollutions from './Pollutions';
-
 const Region = (props) => {
   const { region, regionCountry } = props;
   const dispatch = useDispatch();
@@ -25,11 +23,11 @@ const Region = (props) => {
   else if (region === 'Americas') region1 = Americas;
   else region1 = Antarctic;
   return (
-    <div className="col-6 border">
+    <div className="col-lg-4 col-md-4 col-sm-6 border">
       <div className="region d-flex justify-content-between">
         <div className="d-flex flex-column">
           <img src={region1} alt="" className="m-2 img" />
-          <div>
+          <div className="region-details">
             <p>
               {region}
             </p>

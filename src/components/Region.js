@@ -23,12 +23,12 @@ const Region = (props) => {
   else if (region === 'Americas') region1 = Americas;
   else region1 = Antarctic;
   return (
-    <div className="col-lg-4 col-md-4 col-sm-6 border">
+    <div className="col-6 col-lg-4 col-md-4 border">
       <div className="region d-flex justify-content-between">
         <div className="d-flex flex-column">
           <img src={region1} alt="" className="m-2 img" />
           <div className="region-details">
-            <p>
+            <p className="name">
               {region}
             </p>
             <p>

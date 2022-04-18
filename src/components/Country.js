@@ -13,14 +13,14 @@ const Country = (props) => {
   const dispatch = useDispatch();
 
   return (
-    <div className="col-lg-3 col-md-4 col-sm-6 border">
+    <div className="col-lg-3 col-md-4 col-6 col-6 border">
       <div className="d-flex justify-content-between">
-        <div className="d-flex flex-column m-2">
+        <div className="d-flex flex-column">
           <img src={flag} alt="flag" className="m-2 img" />
           <div className="country-details">
-            <h5>
+            <p className="name">
               {name}
-            </h5>
+            </p>
             <p>
               Population:
               {' '}

@@ -9,7 +9,7 @@ const Pollution = (props) => {
     <div className="pollution m-5">
       <h3 className="text-white m-2">{name}</h3>
       <div className="m-2">
-        <img src={flag} alt="flag" className="w-25 img" />
+        <img src={flag} alt="flag" className="w-25" />
       </div>
       <p className="m-2 text-warning">
         Air pollution ( μg/m3 ) stats - 2022:

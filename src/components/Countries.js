@@ -19,7 +19,7 @@ const Countries = () => {
       <div className="m-2">
         <p>Please wait, Loading...</p>
         <NavLink to="/" className="link text-light">
-          <p>If not working, click to reload</p>
+          <p>If not working, click to reload sign below.</p>
           <FontAwesomeIcon icon={faRefresh} className="icon" text="reload" />
         </NavLink>
       </div>

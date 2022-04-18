@@ -1,12 +1,10 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Title-Info
-> Air pollution Tracker is basically a mobile app application which tracks the data of air of a specific coutry based on their continent.
+> Air pollution Tracker is basically a mobile webApp application which tracks the data of air pollution based on gas percentage of air `from Air Pollution API` of a specific country `from Rest Countries API` based on their continent.
 
-# Screenshot
-![](pic1.png)
-![](pic2.png)
-![](pic3.png)
+# GIF
+![](egif.gif)
 
 ## Built With
 - React

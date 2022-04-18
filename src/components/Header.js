@@ -18,7 +18,7 @@ const Header = (props) => {
               <FontAwesomeIcon icon={faCircleArrowLeft} className="icon" />
             </NavLink>
           </button>
-          <h1 className="header">Air Pollution</h1>
+          <h1 className="header">Air Pollution Tracker</h1>
           <NavLink to="/" className="link text-light">
             <FontAwesomeIcon icon={faRefresh} className="icon" text="reload" />
           </NavLink>

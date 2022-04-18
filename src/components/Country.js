@@ -13,34 +13,35 @@ const Country = (props) => {
   const dispatch = useDispatch();
 
   return (
-    <div className="col-6 border">
-      <div>
-        <button
-          key={id}
-          type="button"
-          className="btn mt-2"
-          onClick={() => {
-            dispatch(getPollutionData(parseInt(lat, 10), parseInt(lng, 10), flag, name));
-            console.log('lt lng: ', parseInt(lat, 10), parseInt(lng, 10));
-          }}
-        >
-          <NavLink to="/pollution" className="link d-flex m-2 text-light">
-            <div>
-              <img src={flag} alt="flag" className="m-2 img" />
-              <div className="">
-                <h5>
-                  {name}
-                </h5>
-                <p>
-                  Population:
-                  {' '}
-                  {population}
-                </p>
-              </div>
-            </div>
-            <FontAwesomeIcon icon={faCircleArrowRight} className="icon" />
-          </NavLink>
-        </button>
+    <div className="col-lg-3 col-md-4 col-6 col-6 border">
+      <div className="d-flex justify-content-between">
+        <div className="d-flex flex-column">
+          <img src={flag} alt="flag" className="m-2 img" />
+          <div className="country-details">
+            <p className="name">
+              {name}
+            </p>
+            <p>
+              Population:
+              {' '}
+              {population}
+            </p>
+          </div>
+        </div>
+        <div>
+          <button
+            key={id}
+            type="button"
+            className="btn mt-2 float-right"
+            onClick={() => {
+              dispatch(getPollutionData(parseInt(lat, 10), parseInt(lng, 10), flag, name));
+            }}
+          >
+            <NavLink to="/pollution" className="link m-2 text-light">
+              <FontAwesomeIcon icon={faCircleArrowRight} className="icon" />
+            </NavLink>
+          </button>
+        </div>
       </div>
     </div>
   );
